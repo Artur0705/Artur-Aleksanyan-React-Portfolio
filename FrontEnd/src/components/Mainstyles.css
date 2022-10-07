@@ -18,6 +18,12 @@
   z-index: -1;
 }
 
+.about-text {
+  padding: 4rem;
+  max-width: 800px;
+  line-height: 3em;
+}
+
 .heading {
   width: 100%;
   height: 100%;
