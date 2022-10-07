@@ -8,8 +8,8 @@ const Project = () => {
     <div>
       <Navbar />
       <Main
-        heading="WELCOME TO MY PROJECTS PAGE"
-        text="Please see some of my recent projects."
+        heading="WELCOME TO MY PROJECTS PAGE ✌️"
+        text="Please see some of my recent projects 😎"
       />
       <Work />
       <Footer />

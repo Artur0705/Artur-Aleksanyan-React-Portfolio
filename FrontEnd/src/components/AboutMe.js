@@ -14,8 +14,8 @@ const AboutMe = () => {
           This portfolio is showcasing my skills and you can find some of my
           recent works in the Project section.Feel free to browse my portfolio
           and if you have any questions please contact me via the form provided
-          by clicking the button below, also you can see my CV by clicking the
-          CV button.
+          by clicking the button below 👇 also you can see my CV by clicking the
+          CV button 👇
         </p>
         <div className="about-btns">
           <Link to="/contact">

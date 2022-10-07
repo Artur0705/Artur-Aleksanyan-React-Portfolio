@@ -17,7 +17,7 @@ const ProjectData = [
   },
   {
     imgSrc: project2,
-    title: "J.A.T.E Just Another Text Editor",
+    title: "J.A.T.E",
     text: "A text editor that meets the PWA criteria and feature a number of data persistence techniques that serve as redundancy in case of the options is not supported by the browser. The application will also function offline.",
     liveView: "https://just-text-editor.herokuapp.com",
     github: "https://github.com/Artur0705/Text-Editor-PWA",
