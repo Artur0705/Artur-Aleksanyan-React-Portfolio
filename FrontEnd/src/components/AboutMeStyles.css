@@ -8,11 +8,25 @@
   flex-wrap: wrap;
 }
 
+.about-me-text {
+  padding: 1.2rem;
+  line-height: 2em;
+}
+
+.btn {
+  min-width: 200px;
+  margin: 1.2rem;
+}
+
+.about-btns {
+  display: flex;
+}
+
 .about .left {
   text-align: center;
   margin: auto;
   padding: 1rem;
-  max-width: 350px;
+  max-width: 500px;
 }
 
 .about .left p {
