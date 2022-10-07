@@ -42,6 +42,11 @@
   margin-top: 1rem;
 }
 
+.social-icons a:hover {
+  filter: brightness(80%);
+  opacity: 0.86;
+}
+
 h4 {
   font-size: 1.2rem;
   padding-bottom: 0.7rem;

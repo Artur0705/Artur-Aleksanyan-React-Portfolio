@@ -27,6 +27,11 @@
   font-weight: 500;
 }
 
+.navigation li a:hover {
+  filter: brightness(80%);
+  opacity: 0.86;
+}
+
 .hamburger {
   display: none;
 }
