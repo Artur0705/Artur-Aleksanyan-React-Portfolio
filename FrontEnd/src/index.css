@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Rajdhani:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #185494, #ee1d23, #faaf18, #ffffff);
+}
+
+h1,
+h4,
+p,
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  font-size: 20px;
+  color: #000000;
+  background: #ffe259;
+  background: -webkit-linear-gradient(to right, #ffe259, #ffa751);
+  background: linear-gradient(to right, #ffe259, #ffa751);
+  padding: 5px 50px;
+  border: solid #000000 2px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  border-radius: 1px;
+  transition: 1000ms;
+  transform: translateY(0);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transition: 1000ms;
+  padding: 10px 44px;
+  transform: translateY(-0px);
+  background-color: #000000;
+  color: #ffffff;
+  border: solid 2px #ffffff;
+}
+
+.contact-btn {
+  font-size: 20px;
+  color: #fff;
+  background-color: transparent;
+  padding: 5px 50px;
+  border: solid #ffffff 2px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  border-radius: 1px;
+  transition: 1000ms;
+  transform: translateY(0);
+  text-transform: uppercase;
+}
+
+.contact-btn:hover {
+  transition: 1000ms;
+  padding: 10px 44px;
+  transform: translateY(-0px);
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border: solid 2px #ffffff;
+}
