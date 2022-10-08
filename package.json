@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node BackEnd/server.js",
     "develop": "concurrently \"cd BackEnd && npm run watch\" \"cd FrontEnd && npm start\"",
-    "install": "cd BackEnd && npm i && cd ../FrontEnd && npm i",
+    "install": "cd BackEnd && npm i --legacy-peer-deps && cd ../FrontEnd && npm i --legacy-peer-deps",
     "build": "cd FrontEnd && npm run build"
   },
   "repository": {
