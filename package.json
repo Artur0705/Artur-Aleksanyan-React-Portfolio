@@ -2,11 +2,12 @@
   "name": "artur-aleksanyan-react-portfolio",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "backend/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "backend": "cd backend && npm start",
-    "frontend": "cd frontend && npm start"
+    "start": "node backend/server.js",
+    "develop": "concurrently \"cd backend && npm run watch\" \"cd frontend && npm start\"",
+    "install": "cd backend && npm i && cd ../frontend && npm i",
+    "build": "cd frontend && npm run build"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,8 @@
   },
   "homepage": "https://github.com/Artur0705/Artur-Aleksanyan-React-Portfolio#readme",
   "dependencies": {
-    "cors": "^2.8.5"
+    "concurrently": "^7.4.0",
+    "cors": "^2.8.5",
+    "sweetalert": "^2.1.2"
   }
 }
