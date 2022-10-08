@@ -12,7 +12,7 @@ const ContactForm = () => {
 
   const sendForm = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:8080/contact", form);
+    await axios.post("/contact", form);
     setForm(defaultForm);
   };
 
