@@ -9,7 +9,7 @@ const About = () => {
       <Navbar />
       <Main
         heading="ABOUT ME"
-        text="Hi, my name is Artur. I'm a current student of Monash university coding Bootcamp learning Full-Stack development.This portfolio is showcasing my skills and you can find some of my recent works in the Project section.Feel free to browse my portfolio and if you have any questions please contact me via the form provided in Contact section"
+        text="Hi, my name is Artur. I'm a current student of Monash university coding Bootcamp learning Full-Stack development."
       />
       <AboutMe />
       <Footer />

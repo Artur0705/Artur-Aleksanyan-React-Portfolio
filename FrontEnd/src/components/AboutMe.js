@@ -9,7 +9,7 @@ const AboutMe = () => {
   return (
     <div className="about">
       <div className="left">
-        <h1>Hello</h1>
+        
         <p className="about-me-text">
           This portfolio is showcasing my skills and you can find some of my
           recent works in the Project section.Feel free to browse my portfolio

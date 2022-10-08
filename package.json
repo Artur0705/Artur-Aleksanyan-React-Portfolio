@@ -22,7 +22,6 @@
   "homepage": "https://github.com/Artur0705/Artur-Aleksanyan-React-Portfolio#readme",
   "dependencies": {
     "concurrently": "^7.4.0",
-    "cors": "^2.8.5",
-    "sweetalert": "^2.1.2"
+    "cors": "^2.8.5"
   }
 }
