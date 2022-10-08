@@ -2,12 +2,12 @@
   "name": "artur-aleksanyan-react-portfolio",
   "version": "1.0.0",
   "description": "",
-  "main": "backend/server.js",
+  "main": "BackEnd/server.js",
   "scripts": {
-    "start": "node backend/server.js",
-    "develop": "concurrently \"cd backend && npm run watch\" \"cd frontend && npm start\"",
-    "install": "cd backend && npm i && cd ../frontend && npm i",
-    "build": "cd frontend && npm run build"
+    "start": "node BackEnd/server.js",
+    "develop": "concurrently \"cd BackEnd && npm run watch\" \"cd FrontEnd && npm start\"",
+    "install": "cd BackEnd && npm i && cd ../FrontEnd && npm i",
+    "build": "cd FrontEnd && npm run build"
   },
   "repository": {
     "type": "git",
