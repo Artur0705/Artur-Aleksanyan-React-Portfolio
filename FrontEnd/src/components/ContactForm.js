@@ -26,7 +26,7 @@ const ContactForm = () => {
     setInput(defaultForm);
     setSwal(true);
 
-    await axios.post("/contact", input);
+    await axios.post("https://artur-aleksanyan-portfolio.herokuapp.com/contact", input);
   };
 
   return (
