@@ -36,7 +36,7 @@ const ContactForm = () => {
         ) {
           setErrors({
             ...errors,
-            email: "Enter a valid email address",
+            email: "Please enter a valid email address",
           });
         } else {
           let newObj = omit(errors, "email");
@@ -48,7 +48,7 @@ const ContactForm = () => {
         if (value.length <= 4) {
           setErrors({
             ...errors,
-            message: "Messge atleast have 5 letters",
+            message: "Minimum 5 characters required",
           });
         } else {
           let newObj = omit(errors, "message");
