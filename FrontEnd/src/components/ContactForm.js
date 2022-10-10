@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./ContactFormStyles.css";
 import axios from "axios";
 import SweetAlert from "react-bootstrap-sweetalert";
+import { omit } from "lodash";
+
 const ContactForm = () => {
   const defaultForm = {
     name: "",
@@ -10,12 +12,62 @@ const ContactForm = () => {
   };
   const [input, setInput] = useState(defaultForm);
   const [swal, setSwal] = useState(false);
+  const [errors, setErrors] = useState({});
 
-  const handleChange = (e) =>
+  const validate = (event, name, value) => {
+    switch (name) {
+      case "name":
+        if (value.length <= 3) {
+          setErrors({
+            ...errors,
+            name: "Name must be minimum 3 characters",
+          });
+        } else {
+          let newObj = omit(errors, "name");
+          setErrors(newObj);
+        }
+        break;
+
+      case "email":
+        if (
+          !new RegExp(
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+          ).test(value)
+        ) {
+          setErrors({
+            ...errors,
+            email: "Enter a valid email address",
+          });
+        } else {
+          let newObj = omit(errors, "email");
+          setErrors(newObj);
+        }
+        break;
+
+      case "message":
+        if (value.length <= 4) {
+          setErrors({
+            ...errors,
+            message: "Messge atleast have 5 letters",
+          });
+        } else {
+          let newObj = omit(errors, "message");
+          setErrors(newObj);
+        }
+        break;
+
+      default:
+        break;
+    }
+  };
+
+  const handleChange = (e) => {
     setInput({
       ...input,
       [e.currentTarget.name]: e.currentTarget.value,
     });
+    validate(e, e.currentTarget.name, e.currentTarget.value);
+  };
 
   const hideAlert = () => {
     setSwal(false);
@@ -23,21 +75,28 @@ const ContactForm = () => {
 
   const sendForm = async (e) => {
     e.preventDefault();
-    setInput(defaultForm);
-    setSwal(true);
+    let error = false;
+    for (let prop in input) {
+      if (input[prop]?.length === 0) {
+        error = true;
+      }
+    }
+    if (Object.keys(errors).length === 0 && !error) {
+      setInput(defaultForm);
+      setSwal(true);
 
-    await axios.post("https://artur-aleksanyan-portfolio.herokuapp.com/contact", input);
+      await axios.post(
+        "https://artur-aleksanyan-portfolio.herokuapp.com/contact",
+        input
+      );
+    }
   };
 
   return (
     <div className="form">
       {swal && (
-        <SweetAlert
-          success
-          title="Your message has been sent!"
-          onConfirm={hideAlert}
-        >
-          Thank you for contacting me!
+        <SweetAlert success title="Woot!" onConfirm={hideAlert}>
+          Thank you for contacting me
         </SweetAlert>
       )}
       <form onSubmit={sendForm}>
@@ -48,6 +107,7 @@ const ContactForm = () => {
           value={input.name}
           onChange={handleChange}
         />
+        {errors.name && <h3>{errors.name}</h3>}
         <label>Email</label>
         <input
           type="email"
@@ -55,6 +115,7 @@ const ContactForm = () => {
           value={input.email}
           onChange={handleChange}
         />
+        {errors.email && <h3>{errors.email}</h3>}
         <label>Message</label>
         <textarea
           rows="6"
@@ -63,6 +124,7 @@ const ContactForm = () => {
           value={input.message}
           onChange={handleChange}
         />
+        {errors.message && <h3>{errors.message}</h3>}
         <button className="btn" type="submit">
           Submit
         </button>
