@@ -85,10 +85,18 @@ const ContactForm = () => {
       setInput(defaultForm);
       setSwal(true);
 
-      await axios.post(
-        "https://artur-aleksanyan-portfolio.herokuapp.com/contact",
-        input
-      );
+      await axios
+        .post(
+          "https://artur-aleksanyan-portfolio.herokuapp.com/contact",
+          input,
+          {}
+        )
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     }
   };
 

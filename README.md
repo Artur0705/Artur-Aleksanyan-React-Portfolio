@@ -41,7 +41,7 @@
   ## Demo
 
   - Please follow this [link](https://artur-aleksanyan-portfolio.herokuapp.com) to visit the deployed application on Heroku.
-  
+   - You can view `Contact Me` page sending email functionality video by following  [this link](https://drive.google.com/file/d/1KKGf0mcEodfzGu4SNsR3j04bIIyJZQ3j/view) .
 
   ## Screenshot 
   - Please see the screenshots below.
@@ -50,6 +50,7 @@
   ![image](./FrontEnd/src/assets/projects.png)
   ![image](./FrontEnd/src/assets/about.png)
   ![image](./FrontEnd/src/assets/contact.png)
+  ![image](./FrontEnd/src/assets/send-email.gif)
 
   ## Questions
   If you have any questions regarding the project you can contact me directly at artlil420@gmail.com.
