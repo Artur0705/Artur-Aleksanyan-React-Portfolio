@@ -95,7 +95,11 @@ const ContactForm = () => {
   return (
     <div className="form">
       {swal && (
-        <SweetAlert success title="Woot!" onConfirm={hideAlert}>
+        <SweetAlert
+          success
+          title="Your message has been sent!"
+          onConfirm={hideAlert}
+        >
           Thank you for contacting me
         </SweetAlert>
       )}
